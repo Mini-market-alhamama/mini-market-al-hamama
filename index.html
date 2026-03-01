@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mini Market Al Hamama - Nador</title>
+<title>Mini Market Al Hamama</title>
 
 <style>
 
-/* Fond */
+/* BODY */
+
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
 background: linear-gradient(135deg,#f0fff4,#e6f7ff);
 }
 
-/* Header */
+/* HEADER */
+
 header{
 background: linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
-padding:20px;
-text-align:center;
 color:white;
+text-align:center;
+padding:20px;
 }
 
 .logo{
@@ -30,7 +31,8 @@ padding:10px;
 border-radius:15px;
 }
 
-/* Menu */
+/* NAVIGATION */
+
 nav{
 background:#27ae60;
 padding:15px;
@@ -43,48 +45,58 @@ margin:15px;
 text-decoration:none;
 font-weight:bold;
 font-size:18px;
+padding:8px 15px;
+border-radius:8px;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#ff3cac;
+background:white;
+color:#27ae60;
 }
 
-/* Hero */
+/* HERO */
+
 .hero{
-padding:60px;
 text-align:center;
+padding:60px;
 color:white;
 font-size:28px;
 font-weight:bold;
 background: linear-gradient(90deg,#ff3cac,#784ba0,#2ecc71);
 }
 
-/* Sections */
+/* SECTION */
+
 section{
-padding:40px;
+padding:50px;
 }
 
-/* Grid */
+/* PRODUCTS GRID */
+
 .products{
-display:grid;
-grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+display:flex;
+flex-wrap:wrap;
 gap:25px;
+justify-content:center;
 }
 
-/* Card */
+/* CARD */
+
 .card{
 background:white;
 border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+width:230px;
 padding:15px;
 text-align:center;
-box-shadow:0 6px 15px rgba(0,0,0,0.15);
 transition:0.3s;
 cursor:pointer;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 12px 25px rgba(0,0,0,0.25);
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.3);
 }
 
 .card img{
@@ -94,27 +106,71 @@ object-fit:cover;
 border-radius:10px;
 }
 
-.price{
-color:#ff3cac;
+/* CONTACT SECTION */
+
+.contact-container{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.contact-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+width:300px;
+text-align:center;
+}
+
+/* BUTTONS */
+
+.btn-whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
 font-weight:bold;
 margin-top:10px;
 }
 
-/* Contact */
-.contact{
-background:white;
-border-radius:15px;
-padding:25px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
+.btn-instagram{
+display:inline-block;
+background:#E1306C;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
 }
 
-/* Footer */
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+
 footer{
 background: linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
+margin-top:20px;
 }
 
 </style>
@@ -131,7 +187,6 @@ margin-top:30px;
 
 </header>
 
-
 <nav>
 
 <a href="#">Accueil</a>
@@ -140,7 +195,6 @@ margin-top:30px;
 
 </nav>
 
-
 <div class="hero">
 
 Votre mini market de confiance à Nador 🏪
@@ -148,18 +202,14 @@ Votre mini market de confiance à Nador 🏪
 </div>
 
 
-
 <section id="produits">
 
 <h2 style="text-align:center;color:#784ba0;">
-Nos catégories de produits
+Nos catégories
 </h2>
-
 
 <div class="products">
 
-
-<!-- CAFES -->
 <a href="cafes.html" style="text-decoration:none;color:black;">
 <div class="card">
 
@@ -167,15 +217,12 @@ Nos catégories de produits
 
 <h3>☕ Cafés</h3>
 
-<p class="price">
-Voir les cafés
-</p>
+<p>Voir les cafés</p>
 
 </div>
 </a>
 
 
-<!-- CHOCOLATS -->
 <a href="chocolats.html" style="text-decoration:none;color:black;">
 <div class="card">
 
@@ -183,129 +230,32 @@ Voir les cafés
 
 <h3>🍫 Chocolats</h3>
 
-<p class="price">
-Voir les chocolats
-</p>
+<p>Voir les chocolats</p>
 
 </div>
 </a>
 
 
-
-<!-- BONBONS -->
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f">
 
 <h3>🍬 Bonbons</h3>
 
-<p class="price">Disponible</p>
+<p>Disponible</p>
 
 </div>
 
 
-<!-- THES -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7">
-
-<h3>🍵 Thés</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-<!-- SURGELES -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f">
-
-<h3>❄️ Surgelés</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- HYGIENE -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
-
-<h3>🧴 Hygiène et Beauté</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- NETTOYAGE -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-
-<h3>🧼 Entretien et Nettoyage</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- BISCUITS -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35">
-
-<h3>🍪 Biscuits</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- BEBE -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba">
-
-<h3>👶 Bébé</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- EPICERIE -->
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c">
-
-<h3>🛒 Épicerie</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
-
-<!-- BOISSONS -->
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62">
 
-<h3>🥤 Eaux et Boissons</h3>
+<h3>🥤 Boissons</h3>
 
-<p class="price">Disponible</p>
+<p>Disponible</p>
 
 </div>
-
-
 
 </div>
 
@@ -313,41 +263,52 @@ Voir les chocolats
 
 
 
-<section id="contact" class="contact">
+<section id="contact">
 
-<h2>Contact</h2>
+<h2 style="text-align:center;color:#784ba0;">
+Contactez-nous
+</h2>
+
+<div class="contact-container">
+
+<div class="contact-box">
+
+<h3>📍 Adresse</h3>
 
 <p>
-📍 Quartier Laarassi, Avenue Annasr<br>
-En face Café Fichaoui, Nador
+Quartier Laarassi<br>
+Avenue Annasr<br>
+en face Café Fichaoui<br>
+Nador
 </p>
 
+<h3>📱 WhatsApp</h3>
 
-<p>
-📞 WhatsApp :
-<a href="https://wa.me/212652243366">
-+212 652 243 366
+<a href="https://wa.me/212652243366" class="btn-whatsapp">
+Contacter
 </a>
-</p>
 
+<h3>📷 Instagram</h3>
 
-<p>
-📷 Instagram :
-<a href="https://www.instagram.com/mini_market_al_hamama">
-mini market al hamama
+<a href="https://www.instagram.com/mini_market_al_hamama" class="btn-instagram">
+Instagram
 </a>
-</p>
+
+</div>
 
 
-<h3>Notre localisation :</h3>
+<div class="contact-box">
 
 <iframe
 src="https://www.google.com/maps?q=35.1686,-2.9335&z=17&output=embed"
 width="100%"
-height="350"
-style="border-radius:15px;border:none;">
+height="300"
+style="border:none;border-radius:15px;">
 </iframe>
 
+</div>
+
+</div>
 
 </section>
 
@@ -358,6 +319,11 @@ style="border-radius:15px;border:none;">
 © Mini Market Al Hamama - Nador
 
 </footer>
+
+
+<a href="https://wa.me/212652243366" class="whatsapp-float">
+WhatsApp
+</a>
 
 
 </body>
