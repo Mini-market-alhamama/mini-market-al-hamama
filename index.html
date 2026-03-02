@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mini Market Al Hamama</title>
 
 <style>
 
-/* BODY */
-
 body{
-font-family: Arial;
 margin:0;
-background: linear-gradient(135deg,#f0fff4,#e6f7ff);
+font-family:Arial;
+background:linear-gradient(135deg,#f0fff4,#e6f7ff);
 }
 
 /* HEADER */
 
 header{
-background: linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
+background:linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
 color:white;
-text-align:center;
 padding:20px;
+text-align:center;
 }
 
 .logo{
-width:180px;
+width:120px;
 background:white;
 padding:10px;
-border-radius:15px;
+border-radius:10px;
 }
 
-header h1{
-margin:10px;
+/* MENU */
+
+nav{
+background:#27ae60;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+font-size:18px;
 }
 
 /* HERO */
 
 .hero{
-background: linear-gradient(90deg,#ff3cac,#784ba0,#2ecc71);
+background:linear-gradient(90deg,#ff3cac,#784ba0,#2ecc71);
 color:white;
 text-align:center;
-padding:50px;
-font-size:26px;
-font-weight:bold;
-}
-
-/* SECTION */
-
-section{
-padding:40px;
+padding:60px 20px;
 }
 
 /* PRODUCTS */
@@ -60,255 +60,165 @@ padding:40px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:30px;
+padding:40px;
 }
-
-/* CARD */
 
 .card{
 background:white;
-padding:15px;
+width:250px;
+padding:20px;
 border-radius:15px;
-width:220px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
 text-align:center;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .card img{
 width:100%;
-height:150px;
-object-fit:cover;
+height:160px;
+object-fit:contain;
+}
+
+.btn{
+background:#27ae60;
+color:white;
+padding:10px;
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
 border-radius:10px;
 }
 
-.price{
-color:#ff3cac;
-font-weight:bold;
-}
+/* CONTACT */
 
-/* CONTACT MODERNE */
-
-.contact-container{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-
-}
-
-.contact-box{
-
+.contact{
 background:white;
-padding:25px;
+margin:40px;
+padding:30px;
 border-radius:15px;
-width:300px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-
-}
-
-.contact-box h3{
-color:#ff3cac;
-}
-
-.contact-box a{
-text-decoration:none;
-color:#2ecc71;
-font-weight:bold;
-}
-
-/* MAP */
-
-.map{
-width:100%;
-border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+text-align:center;
 }
 
 /* FOOTER */
 
 footer{
-
-background: linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
+background:#27ae60;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
+margin-top:20px;
+}
 
+/* WHATSAPP FLOAT */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#1ebe5d;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <img src="logo.png" class="logo">
-
 <h1>Mini Market Al Hamama</h1>
-
 </header>
 
+<nav>
+<a href="index.html">Accueil</a>
+<a href="cafes.html">Cafés</a>
+<a href="chocolats.html">Chocolats</a>
+<a href="boissons.html">Boissons</a>
+</nav>
+
 <div class="hero">
-
-Votre mini market de confiance à Nador 🏪
-
+<h2>Votre mini market de confiance à Nador</h2>
+<p>Produits originaux • Meilleur prix • Qualité garantie</p>
 </div>
 
-<section>
-
-<h2 style="text-align:center;color:#784ba0;">
-Nos Produits
-</h2>
-
-<div class="products">
+<section class="products">
 
 <!-- CAFES -->
-
-<a href="cafes.html" style="text-decoration:none;color:black;">
-
 <div class="card">
-
 <img src="lavazza-crema.jpg">
-
-<h3>☕ Cafés</h3>
-
-<p class="price">Voir produits</p>
-
+<h3>Cafés</h3>
+<p>Lavazza • Bellarom • Dallmayr</p>
+<a href="cafes.html" class="btn">Voir les cafés</a>
 </div>
-
-</a>
-
 
 <!-- CHOCOLATS -->
-
-<a href="chocolats.html" style="text-decoration:none;color:black;">
-
 <div class="card">
-
 <img src="kinder-bueno.jpg">
-
-<h3>🍫 Chocolats</h3>
-
-<p class="price">Voir produits</p>
-
+<h3>Chocolats</h3>
+<p>Kinder • Milka • Ferrero</p>
+<a href="chocolats.html" class="btn">Voir les chocolats</a>
 </div>
-
-</a>
-
 
 <!-- BOISSONS -->
-
-<a href="boissons.html" style="text-decoration:none;color:black;">
-
 <div class="card">
-
-<img src="schweppes-citrus.jpg">
-
-<h3>🥤 Boissons</h3>
-
-<p class="price">Voir produits</p>
-
-</div>
-
-</a>
-
-
-<!-- BONBONS -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f">
-
-<h3>🍬 Bonbons</h3>
-
-<p class="price">Disponible</p>
-
-</div>
-
-
+<img src="redbull.jpg">
+<h3>Boissons</h3>
+<p>RedBull • Jus • Soda</p>
+<a href="boissons.html" class="btn">Voir les boissons</a>
 </div>
 
 </section>
 
-
-<!-- CONTACT MODERNE -->
-
-<section>
-
-<h2 style="text-align:center;color:#784ba0;">
-Contactez-nous
-</h2>
-
-<div class="contact-container">
-
-
-<div class="contact-box">
-
-<h3>📍 Adresse</h3>
-
+<section class="contact">
+<h2>Contactez-nous</h2>
+<p>📍 Quartier Laarassi, Nador</p>
 <p>
-Quartier Laarassi<br>
-Avenue Annasr<br>
-En face Café Fichaoui<br>
-Nador
-</p>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>📞 WhatsApp</h3>
-
-<a href="https://wa.me/212652243366">
-
+📞 WhatsApp :
+<a href="https://wa.me/212652243366" target="_blank">
 +212 652 243 366
-
 </a>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>📷 Instagram</h3>
-
-<a href="https://instagram.com">
-
-Mini Market Al Hamama
-
+</p>
+<p>
+📷 Instagram :
+<a href="https://instagram.com/market_al_hamama" target="_blank">
+@market_al_hamama
 </a>
-
-</div>
-
-</div>
-
-
-<br><br>
-
-<iframe
-class="map"
-height="350"
-src="https://www.google.com/maps?q=35.1686,-2.9335&output=embed">
-</iframe>
-
+</p>
 </section>
-
 
 <footer>
-
-© 2026 Mini Market Al Hamama - Nador
-
+© 2026 Mini Market Al Hamama
 </footer>
 
+<!-- WhatsApp Floating Button -->
+
+<a href="https://wa.me/212652243366?text=Bonjour%20je%20veux%20commander"
+class="whatsapp-float"
+target="_blank">
+💬
+</a>
 
 </body>
 </html>
