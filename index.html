@@ -3,20 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mini Market Al Hamama - Nador</title>
+<title>Nos Cafés - Mini Market Al Hamama</title>
 
 <style>
-
-/* RESET */
 
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#ff9a9e,#fad0c4,#a18cd1);
+background:linear-gradient(135deg,#fbc2eb,#a6c1ee);
 }
 
-/* HEADER PREMIUM FIXE */
+/* HEADER */
 
 .main-header{
 position:sticky;
@@ -32,7 +29,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 .logo{
-width:50px;
+width:45px;
 margin-right:10px;
 }
 
@@ -41,13 +38,9 @@ display:flex;
 align-items:center;
 }
 
-.logo-title h2{
-margin:0;
-}
-
 nav a{
 color:white;
-margin:0 15px;
+margin:0 12px;
 text-decoration:none;
 font-weight:bold;
 }
@@ -56,14 +49,11 @@ nav a:hover{
 text-decoration:underline;
 }
 
-/* PANIER */
-
 #cart-icon{
 background:#25D366;
 padding:8px 15px;
 border-radius:30px;
 cursor:pointer;
-font-weight:bold;
 }
 
 #cart-count{
@@ -73,27 +63,17 @@ border-radius:50%;
 margin-left:5px;
 }
 
-/* HERO SECTION */
+/* SECTION */
 
-.hero{
+h1{
 text-align:center;
-color:white;
-padding:50px 20px;
+margin-top:30px;
+color:#333;
 }
 
-.hero h1{
-font-size:40px;
-margin:0;
-}
+/* PRODUCTS */
 
-.hero p{
-font-size:18px;
-margin-top:10px;
-}
-
-/* CATEGORIES */
-
-.categories{
+.products{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
@@ -109,36 +89,59 @@ border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.2);
 text-align:center;
 transition:0.3s;
-animation:fadeIn 0.8s ease;
 }
 
 .card:hover{
 transform:translateY(-10px) scale(1.05);
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
 }
 
 .card img{
 width:100%;
-height:160px;
+height:170px;
 object-fit:contain;
-margin-bottom:10px;
 }
 
-.btn{
+.old-price{
+text-decoration:line-through;
+color:#888;
+margin:5px 0;
+}
+
+.price{
+color:#e74c3c;
+font-weight:bold;
+font-size:22px;
+margin:5px 0;
+}
+
+.stock{
+color:green;
+}
+
+.cart-btn{
+background:#ff9800;
+color:white;
+border:none;
+padding:10px;
+margin-top:8px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cart-btn:hover{
+background:#e68900;
+}
+
+.whatsapp{
 display:inline-block;
-margin-top:10px;
-padding:12px 20px;
-background:#2ecc71;
+margin-top:8px;
+padding:10px 15px;
+background:#25D366;
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:8px;
 font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#27ae60;
-transform:scale(1.05);
 }
 
 /* PANIER MODAL */
@@ -174,27 +177,12 @@ color:white;
 cursor:pointer;
 }
 
-/* WHATSAPP FLOAT */
-
-.floating-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
 /* FOOTER */
 
 footer{
 background:#222;
 color:white;
-padding:30px;
+padding:25px;
 text-align:center;
 margin-top:40px;
 }
@@ -205,38 +193,21 @@ text-decoration:none;
 margin:10px;
 }
 
-/* ANIMATION */
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
 </style>
-
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header class="main-header">
 
 <div class="logo-title">
 <img src="logo.png" class="logo">
-<h2>Mini Market Al Hamama</h2>
+<h3>Mini Market Al Hamama</h3>
 </div>
 
 <nav>
 <a href="index.html">Accueil</a>
 <a href="promotions.html">Promotions</a>
-<a href="cafes.html">Cafés</a>
 <a href="chocolats.html">Chocolats</a>
 <a href="boissons.html">Boissons</a>
 </nav>
@@ -247,45 +218,55 @@ transform:translateY(0);
 
 </header>
 
+<h1>☕ Nos Cafés</h1>
 
-<!-- HERO -->
+<div class="products">
 
-<section class="hero">
-<h1>Votre mini market de confiance à Nador</h1>
-<p>Quartier Laarassi • Avenue Annasr</p>
-</section>
-
-
-<!-- CATEGORIES -->
-
-<div class="categories">
+<!-- Lavazza Crema -->
 
 <div class="card">
-<img src="promo.jpg">
-<h3>🔥 Promotions</h3>
-<a href="promotions.html" class="btn">Voir les produits</a>
+<img src="lavazza-crema.jpg">
+<h3>Lavazza Crema</h3>
+<p>Poids : 1 kg</p>
+<p class="stock">● Stock disponible</p>
+<p class="old-price">190 DH</p>
+<p class="price">150 DH</p>
+<button class="cart-btn" onclick="addToCart('Lavazza Crema',150)">
+🛒 Ajouter au panier
+</button>
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Crema">
+Commander WhatsApp
+</a>
 </div>
+
+<!-- Lavazza Gusto -->
 
 <div class="card">
-<img src="cafes.jpg">
-<h3>☕ Cafés</h3>
-<a href="cafes.html" class="btn">Voir les produits</a>
+<img src="lavazza-gusto.jpg">
+<h3>Lavazza Gusto</h3>
+<p>Poids : 1 kg</p>
+<p class="stock">● Stock disponible</p>
+<p class="old-price">190 DH</p>
+<p class="price">150 DH</p>
+<button class="cart-btn" onclick="addToCart('Lavazza Gusto',150)">
+🛒 Ajouter au panier
+</button>
 </div>
+
+<!-- Dallmayr -->
 
 <div class="card">
-<img src="chocolats.jpg">
-<h3>🍫 Chocolats</h3>
-<a href="chocolats.html" class="btn">Voir les produits</a>
-</div>
-
-<div class="card">
-<img src="boissons.jpg">
-<h3>🥤 Boissons</h3>
-<a href="boissons.html" class="btn">Voir les produits</a>
+<img src="dallmayr.jpg">
+<h3>Dallmayr Home Barista</h3>
+<p>Poids : 1 kg</p>
+<p class="price">160 DH</p>
+<button class="cart-btn" onclick="addToCart('Dallmayr',160)">
+🛒 Ajouter au panier
+</button>
 </div>
 
 </div>
-
 
 <!-- PANIER MODAL -->
 
@@ -299,32 +280,12 @@ transform:translateY(0);
 </div>
 </div>
 
-
-<!-- WHATSAPP FLOAT -->
-
-<a href="https://wa.me/212652243366" class="floating-whatsapp">
-💬
-</a>
-
-
-<!-- FOOTER -->
-
 <footer>
 
-<p>Mini Market Al Hamama</p>
-
-<p>
-<a href="https://wa.me/212652243366">WhatsApp</a> |
-<a href="#">Instagram</a> |
-<a href="#">Localisation</a>
-</p>
-
-<p>© 2026 Mini Market Al Hamama - Nador</p>
+<p>Mini Market Al Hamama - Nador</p>
+<a href="https://wa.me/212652243366">WhatsApp</a>
 
 </footer>
-
-
-<!-- SCRIPT PANIER PREMIUM -->
 
 <script>
 
@@ -339,6 +300,7 @@ total += price;
 localStorage.setItem("cart", JSON.stringify(cart));
 localStorage.setItem("total", total);
 updateCart();
+alert(name + " ajouté au panier 🛒");
 }
 
 function updateCart(){
