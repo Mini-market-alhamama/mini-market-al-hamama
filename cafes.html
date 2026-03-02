@@ -2,77 +2,91 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Nos Cafés - Mini Market Al Hamama</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafés - Mini Market Al Hamama</title>
 
 <style>
 
-.back-btn{
-display:inline-block;
-padding:12px 25px;
-background: linear-gradient(90deg,#2ecc71,#27ae60);
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-font-size:16px;
-transition:0.3s;
-}
-
-.back-btn:hover{
-transform:scale(1.05);
-background: linear-gradient(90deg,#27ae60,#2ecc71);
-}  
-.badge.promo{
-position:absolute;
-background:#e74c3c;
-color:white;
-padding:5px 10px;
-border-radius:8px;
-font-size:12px;
-font-weight:bold;
-}
-
-.old-price{
-text-decoration:line-through;
-color:gray;
-font-size:16px;
-margin:5px 0;
-}
-
-.price{
-color:#e74c3c;
-font-weight:bold;
-font-size:20px;
-margin:5px 0;
-}
-  
 body{
+margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#f0fff4,#e6f7ff);
-padding:40px;
+background:linear-gradient(135deg,#c3ecf7,#f5af19);
+}
+
+/* HEADER */
+
+.header{
+position:sticky;
+top:0;
+background:linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+}
+
+.logo{
+width:50px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* PANIER */
+
+#cart-icon{
+background:#25D366;
+padding:10px 15px;
+border-radius:30px;
+cursor:pointer;
+}
+
+#cart-count{
+background:red;
+padding:3px 7px;
+border-radius:50%;
+margin-left:5px;
+}
+
+/* PRODUCTS */
+
+.title{
+text-align:center;
+margin-top:30px;
+font-size:32px;
 }
 
 .products{
 display:flex;
 flex-wrap:wrap;
-gap:30px;
 justify-content:center;
+gap:25px;
+padding:40px;
 }
 
 .card{
 background:white;
-width:250px;
 padding:20px;
+width:260px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 text-align:center;
-position:relative;
 }
 
 .card img{
 width:100%;
-height:200px;
+height:180px;
 object-fit:contain;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
 }
 
 .price{
@@ -81,268 +95,186 @@ font-size:22px;
 font-weight:bold;
 }
 
-.old{
-text-decoration:line-through;
-color:gray;
-}
-
-.stock{
-color:green;
-font-weight:bold;
-}
-
-.promo{
-position:absolute;
-top:10px;
-left:10px;
-background:red;
+.cart-btn{
+background:#ff9800;
 color:white;
-padding:5px 10px;
-border-radius:10px;
-font-size:12px;
-}
-
-.best{
-position:absolute;
-top:10px;
-right:10px;
-background:green;
-color:white;
-padding:5px 10px;
-border-radius:10px;
-font-size:12px;
+border:none;
+padding:10px;
+margin:5px;
+border-radius:8px;
+cursor:pointer;
 }
 
 .whatsapp{
+display:inline-block;
 background:#25D366;
 color:white;
 padding:10px;
-display:block;
-margin-top:10px;
+margin-top:5px;
+border-radius:8px;
 text-decoration:none;
+}
+
+/* MODAL */
+
+#cart-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.cart-box{
+background:white;
+padding:20px;
 border-radius:10px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<h1>☕ Nos Cafés</h1>
+<div class="header">
+
+<div>
+<img src="logo.png" class="logo">
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="promotions.html">Promotions</a>
+<a href="chocolats.html">Chocolats</a>
+</nav>
+
+<div id="cart-icon" onclick="openCart()">
+🛒 <span id="cart-count">0</span>
+</div>
+
+</div>
+
+<div class="title">☕ Nos Cafés</div>
 
 <div class="products">
 
 <!-- Lavazza Crema -->
 <div class="card">
-<div class="promo">PROMO</div>
-<div class="best">MEILLEUR PRIX</div>
-
 <img src="lavazza-crema.jpg">
-
-<h3>Lavazza Crema</h3>
-
-<p>Poids : 1 kg</p>
-
-<p class="stock">● Stock disponible</p>
-
+<h3>Lavazza Crema (1kg)</h3>
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Crema 1kg">
-Commander WhatsApp
-</a>
-
+<button class="cart-btn" onclick="addToCart('Lavazza Crema',150)">Ajouter au panier</button>
 </div>
 
 <!-- Lavazza Gusto -->
 <div class="card">
-<div class="promo">PROMO</div>
-<div class="best">MEILLEUR PRIX</div>
-
 <img src="lavazza-gusto.jpg">
-
-<h3>Lavazza Gusto</h3>
-
-<p>Poids : 1 kg</p>
-
-<p class="stock">● Stock disponible</p>
-
+<h3>Lavazza Gusto (1kg)</h3>
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Gusto 1kg">
-Commander WhatsApp
-</a>
-
+<button class="cart-btn" onclick="addToCart('Lavazza Gusto',150)">Ajouter</button>
 </div>
 
 <!-- Lavazza Forte -->
 <div class="card">
-<div class="promo">PROMO</div>
-<div class="best">MEILLEUR PRIX</div>
-
 <img src="lavazza-forte.jpg">
-
-<h3>Lavazza Forte</h3>
-
-<p>Poids : 1 kg</p>
-
-<p class="stock">● Stock disponible</p>
-
+<h3>Lavazza Forte (1kg)</h3>
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
+<button onclick="addToCart('Lavazza Forte',150)">Ajouter</button>
+</div>
 
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Forte 1kg">
-Commander WhatsApp
-</a>
-
+<!-- Lavazza Oro -->
+<div class="card">
+<img src="lavazza-oro.jpg">
+<h3>Lavazza Qualità Oro (1kg)</h3>
+<p class="old">190 DH</p>
+<p class="price">150 DH</p>
+<button onclick="addToCart('Lavazza Oro',150)">Ajouter</button>
 </div>
 
 <!-- Bellarom Intenso -->
 <div class="card">
-<div class="promo">PROMO</div>
-
 <img src="bellarom-intenso.jpg">
-
-<h3>Bellarom Intenso</h3>
-
-<p>Poids : 500 g</p>
-
-<p class="stock">● Stock disponible</p>
-
+<h3>Bellarom Intenso (500g)</h3>
 <p class="old">85 DH</p>
 <p class="price">60 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Bellarom Intenso">
-Commander WhatsApp
-</a>
-
+<button onclick="addToCart('Bellarom Intenso',60)">Ajouter</button>
 </div>
 
 <!-- Bellarom Gold -->
 <div class="card">
-
 <img src="bellarom-gold.jpg">
-
-<h3>Bellarom Gold</h3>
-
-<p>Poids : 500 g</p>
-
-<p class="stock">● Stock disponible</p>
-
+<h3>Bellarom Gold (500g)</h3>
 <p class="price">85 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Bellarom Gold">
-Commander WhatsApp
-</a>
-
+<button onclick="addToCart('Bellarom Gold',85)">Ajouter</button>
 </div>
 
 <!-- Dallmayr -->
 <div class="card">
-<div class="promo">PROMO</div>
-
-<img src="dallmayr-prodomo.jpg">
-
-<h3>Dallmayr Prodomo</h3>
-
-<p>Poids : 500 g</p>
-
-<p class="stock">● Stock disponible</p>
-
+<img src="dallmayr.jpg">
+<h3>Dallmayr Prodomo (500g)</h3>
 <p class="old">90 DH</p>
 <p class="price">85 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Dallmayr">
-Commander WhatsApp
-</a>
-
+<button onclick="addToCart('Dallmayr',85)">Ajouter</button>
 </div>
 
-<!-- Capriccio -->
+<!-- Dubois -->
 <div class="card">
-
-<img src="capriccio-dubois.jpg">
-
-<h3>Capriccio Dubois</h3>
-
-<p>Poids : 400 g</p>
-
-<p class="stock">● Stock disponible</p>
-
+<img src="dubois.jpg">
+<h3>Dubois Capriccio 400g</h3>
 <p class="price">55 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Capriccio">
-Commander WhatsApp
-</a>
+<button onclick="addToCart('Dubois',55)">Ajouter</button>
+</div>
 
 </div>
 
-<div class="card">
-
-<span class="badge promo">PROMO</span>
-
-<img src="dallmayr-barista.jpg">
-
-<h3>Dallmayr Home Barista</h3>
-
-<p>Poids : 1 kg</p>
-
-<p class="stock">● Stock disponible</p>
-
-<p class="old-price">190 DH</p>
-
-<p class="price">150 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Dallmayr Home Barista en promo">
-Commander WhatsApp
-</a>
-
+<div id="cart-modal">
+<div class="cart-box">
+<h2>Panier</h2>
+<ul id="cart-items"></ul>
+<p>Total : <span id="cart-total">0</span> DH</p>
+<button onclick="sendWhatsApp()">Commander</button>
+<button onclick="closeCart()">Fermer</button>
+</div>
 </div>
 
+<script>
 
+let cart=[];
+let total=0;
 
-<div class="card">
+function addToCart(name,price){
+cart.push(name+" "+price+"DH");
+total+=price;
+document.getElementById("cart-count").innerText=cart.length;
+}
 
-<span class="badge promo">PROMO</span>
+function openCart(){
+document.getElementById("cart-modal").style.display="flex";
+let list="";
+cart.forEach(item=> list+="<li>"+item+"</li>");
+document.getElementById("cart-items").innerHTML=list;
+document.getElementById("cart-total").innerText=total;
+}
 
-<img src="barissimo-espresso.jpg">
+function closeCart(){
+document.getElementById("cart-modal").style.display="none";
+}
 
-<h3>Barissimo Tradizione Espresso</h3>
+function sendWhatsApp(){
+let message="Commande:%0A";
+cart.forEach(item=> message+=item+"%0A");
+message+="Total:"+total+"DH";
+window.open("https://wa.me/212652243366?text="+message);
+}
 
-<p>Poids : 1 kg</p>
+</script>
 
-<p class="stock">● Stock disponible</p>
-
-<p class="old-price">190 DH</p>
-
-<p class="price">150 DH</p>
-
-<a class="whatsapp"
-href="https://wa.me/212652243366?text=Bonjour je veux Barissimo Tradizione Espresso en promo">
-Commander WhatsApp
-</a>
-
-</div>
-  
-</div>
-
-<div style="text-align:center; margin:40px;">
-<a href="index.html" class="back-btn">⬅ Retour à l'accueil</a>
-</div>
-  
 </body>
-
 </html>
-
-
-
