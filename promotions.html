@@ -1,271 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promotions - Mini Market Al Hamama</title>
-
-<style>
-
-body{
-margin:0;
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#fff5f5,#ffe6e6);
-}
-
-/* HEADER */
-
-header{
-background: linear-gradient(90deg,#d40000,#ff6600);
-color:white;
-text-align:center;
-padding:30px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-header a{
-display:inline-block;
-margin-top:15px;
-background:white;
-color:#d40000;
-padding:8px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-header a:hover{
-background:#ffe0e0;
-}
-
-/* SECTION */
-
-.section{
-padding:60px 20px;
-text-align:center;
-}
-
-.section h2{
-color:#d40000;
-margin-bottom:50px;
-font-size:30px;
-}
-
-/* GRID */
-
-.grid{
-display:flex;
-justify-content:center;
-gap:50px;
-flex-wrap:wrap;
-}
-
-/* CARD */
-
-.card{
-background:white;
-width:300px;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-position:relative;
-transition:0.4s;
-animation:fadeIn 1s ease;
-}
-
-.card:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 20px 40px rgba(0,0,0,0.25);
-}
-
-/* BADGES */
-
-.badge{
-position:absolute;
-top:15px;
-left:15px;
-background:#ff0000;
-color:white;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-}
-
-.super-badge{
-position:absolute;
-top:15px;
-right:15px;
-background:linear-gradient(45deg,gold,orange);
-color:black;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-animation:glow 1.5s infinite alternate;
-}
-
-/* IMAGE */
-
-.card img{
-width:220px;
-margin-bottom:20px;
-transition:0.4s;
-}
-
-.card:hover img{
-transform:scale(1.1);
-}
-
-/* PRICES */
-
-.old-price{
-text-decoration:line-through;
-color:gray;
-font-size:16px;
-}
-
-.new-price{
-color:#d40000;
-font-size:26px;
-font-weight:bold;
-margin:10px 0;
-}
-
-/* BUTTON */
-
-.btn{
-display:inline-block;
-margin-top:15px;
-background:#25D366;
-color:white;
-padding:12px 25px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-animation:pulse 2s infinite;
-}
-
-.btn:hover{
-background:#1ebe5d;
-transform:scale(1.05);
-}
-
-/* FLOAT WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:18px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
-animation:pulse 2s infinite;
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
-}
-
-@keyframes glow{
-from{
-box-shadow:0 0 5px gold;
-}
-to{
-box-shadow:0 0 20px orange;
-}
-}
-
-</style>
+<title>Promotions</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>🔥 Offres Spéciales</h1>
-<a href="index.html">← Retour</a>
-</header>
+<nav class="navbar">
+<div class="nav-container">
 
-<section class="section">
+<div class="logo">
+<img src="logo.png">
+Mini Market Al Hamama
+</div>
 
-<h2>Promotions en cours</h2>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="promotions.html">Promotions</a></li>
+<li><a href="cafes.html">Cafés</a></li>
+<li><a href="chocolats.html">Chocolats</a></li>
+<li><a href="boissons.html">Boissons</a></li>
+</ul>
 
-<div class="grid">
+</div>
+</nav>
 
-<!-- KINDER BUENO -->
+<div class="hero">
+<h1>Promotions</h1>
+</div>
+
+<div class="cards">
 
 <div class="card">
-
-<span class="badge">PROMO</span>
-<span class="super-badge">SUPER PROMO</span>
-
-<img src="kinder-bueno.jpg" alt="Kinder Bueno">
-
+<img src="kinder-bueno.jpg">
 <h3>Kinder Bueno</h3>
-
-<p class="old-price">9 DH</p>
-<p class="new-price">6 DH</p>
-
-<p style="color:green;font-weight:bold;">Économie 3 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Kinder Bueno en promo"
-class="btn">
-Commander WhatsApp
-</a>
-
+<p>6 DH</p>
 </div>
-
-<!-- FERRERO KUSSCHEN -->
 
 <div class="card">
-
-<span class="badge">PROMO</span>
-<span class="super-badge">SUPER PROMO</span>
-
-<img src="ferrero-kusschen.jpg" alt="Ferrero Küsschen">
-
-<h3>Ferrero Küsschen (30 pièces)</h3>
-
-<p class="old-price">75 DH</p>
-<p class="new-price">30 DH</p>
-
-<p style="color:green;font-weight:bold;">Économie 45 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Ferrero Küsschen en promo"
-class="btn">
-Commander WhatsApp
-</a>
-
+<img src="ferrero-kusschen.jpg">
+<h3>Ferrero Küsschen</h3>
+<p>30 DH</p>
 </div>
 
 </div>
 
-</section>
-
-<a href="https://wa.me/212652243366"
-class="whatsapp-float">
-💬
-</a>
+<a href="https://wa.me/212652243366" class="whatsapp-float">💬</a>
 
 </body>
 </html>
