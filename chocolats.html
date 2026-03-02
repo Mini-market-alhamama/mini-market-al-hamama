@@ -4,94 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chocolats | Mini Market Al Hamama</title>
+<title>Chocolats - Mini Market Al Hamama</title>
 
 <style>
 
 body{
-    margin:0;
-    font-family:Arial;
-    background:#f4f6f8;
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#f3ecff,#e0f7fa);
 }
 
 /* HEADER */
 
-.header{
-    background:linear-gradient(135deg,#8b4513,#d2691e);
-    padding:40px;
-    text-align:center;
-    color:white;
+header{
+background:linear-gradient(90deg,#ff6a00,#ee0979);
+color:white;
+text-align:center;
+padding:30px;
 }
 
-/* CONTAINER */
-
-.container{
-    padding:40px;
+header h1{
+margin:0;
 }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+/* SECTION */
+
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
 }
 
 /* CARD */
 
-.product-card{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    position:relative;
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.product-card img{
-    width:140px;
-    height:140px;
-    object-fit:contain;
+.card:hover{
+transform:translateY(-5px);
 }
 
-/* PROMO BADGE */
-
-.badge{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:red;
-    color:white;
-    padding:5px 10px;
-    border-radius:10px;
-    font-size:12px;
+.card img{
+width:140px;
+height:140px;
+object-fit:contain;
+margin-bottom:10px;
 }
 
-/* PRICES */
-
-.old-price{
-    text-decoration:line-through;
-    color:gray;
-}
+/* PRICE */
 
 .price{
-    color:red;
-    font-size:22px;
-    font-weight:bold;
+color:red;
+font-size:22px;
+font-weight:bold;
+margin:5px 0;
+}
+
+.old-price{
+color:gray;
+text-decoration:line-through;
+margin:0;
 }
 
 /* BUTTON */
 
 .btn{
-    display:inline-block;
-    margin-top:10px;
-    background:#25D366;
-    color:white;
-    padding:10px 20px;
-    border-radius:8px;
-    text-decoration:none;
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 }
 
 .btn:hover{
-    background:#1ebe5d;
+background:#1ebe5d;
+}
+
+/* BACK BUTTON */
+
+.back{
+display:inline-block;
+margin-top:30px;
+padding:10px 20px;
+background:#333;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:12px;
+border-radius:50%;
+text-decoration:none;
 }
 
 </style>
@@ -99,54 +126,36 @@ body{
 </head>
 <body>
 
-<div class="header">
+<header>
 <h1>🍫 Nos Chocolats</h1>
 <p>Stock disponible</p>
-</div>
+</header>
 
-<div class="container">
-<div class="products">
+<section class="section">
 
+<div class="grid">
 
-<!-- KINDER BUENO PROMO -->
+<!-- KINDER BUENO -->
 
-<div class="product-card">
-
-<div class="badge">PROMO</div>
+<div class="card">
 
 <img src="kinder-bueno.jpg">
 
 <h3>Kinder Bueno</h3>
 
 <p class="old-price">9 DH</p>
-
 <p class="price">6 DH</p>
 
 <a href="https://wa.me/212652243366?text=Je veux Kinder Bueno"
-class="btn">Commander WhatsApp</a>
+class="btn">
+Commander
+</a>
 
 </div>
-
-
-<!-- MARS -->
-
-<div class="product-card">
-
-<img src="mars.jpg">
-
-<h3>Mars</h3>
-
-<p class="price">5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Mars"
-class="btn">Commander WhatsApp</a>
-
-</div>
-
 
 <!-- TWIX -->
 
-<div class="product-card">
+<div class="card">
 
 <img src="twix.jpg">
 
@@ -155,29 +164,113 @@ class="btn">Commander WhatsApp</a>
 <p class="price">5 DH</p>
 
 <a href="https://wa.me/212652243366?text=Je veux Twix"
-class="btn">Commander WhatsApp</a>
+class="btn">
+Commander
+</a>
 
 </div>
 
+<!-- MARS -->
+
+<div class="card">
+
+<img src="mars.jpg">
+
+<h3>Mars</h3>
+
+<p class="price">5 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux Mars"
+class="btn">
+Commander
+</a>
+
+</div>
 
 <!-- NESTLE -->
 
-<div class="product-card">
+<div class="card">
 
 <img src="nestle.jpg">
 
-<h3>Nestlé Chocolat</h3>
+<h3>Nestlé</h3>
 
 <p class="price">20 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux Nestlé Chocolat"
-class="btn">Commander WhatsApp</a>
+<a href="https://wa.me/212652243366?text=Je veux Nestlé"
+class="btn">
+Commander
+</a>
 
 </div>
 
+<!-- MILKA -->
+
+<div class="card">
+
+<img src="milka.jpg">
+
+<h3>Milka</h3>
+
+<p class="price">20 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux Milka"
+class="btn">
+Commander
+</a>
 
 </div>
+
+<!-- MALTESERS -->
+
+<div class="card">
+
+<img src="maltesers.jpg">
+
+<h3>Maltesers</h3>
+
+<p class="price">15 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux Maltesers"
+class="btn">
+Commander
+</a>
+
 </div>
+
+<!-- RAFFAELLO -->
+
+<div class="card">
+
+<img src="raffaello.jpg">
+
+<h3>Raffaello</h3>
+
+<p class="price">30 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux Raffaello"
+class="btn">
+Commander
+</a>
+
+</div>
+
+</div>
+
+<!-- BACK BUTTON -->
+
+<a href="index.html" class="back">
+⬅ Retour à l'accueil
+</a>
+
+</section>
+
+<!-- WHATSAPP FLOAT -->
+
+<a href="https://wa.me/212652243366"
+class="whatsapp-float">
+💬
+</a>
 
 </body>
 </html>
