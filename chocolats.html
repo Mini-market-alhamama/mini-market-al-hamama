@@ -2,137 +2,104 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Chocolats - Mini Market Al Hamama</title>
 
 <style>
 
 body{
-font-family:Arial;
-margin:0;
-background:linear-gradient(135deg,#f3ecff,#e0f7fa);
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
 /* HEADER */
-
-header{
-background:linear-gradient(90deg,#ff6a00,#ee0979);
-color:white;
-text-align:center;
-padding:30px;
+.header{
+    background:linear-gradient(90deg,#11998e,#38ef7d);
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
 }
 
-header h1{
-margin:0;
-font-size:28px;
+/* CONTAINER */
+.container{
+    padding:40px;
 }
 
-/* SECTION */
-
-.section{
-padding:40px 20px;
-text-align:center;
-}
-
+/* GRID */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
 /* CARD */
-
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-position:relative;
+.product{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-6px);
+.product:hover{
+    transform:translateY(-8px);
 }
 
-.card img{
-width:140px;
-height:140px;
-object-fit:contain;
+/* IMAGE */
+.product img{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+}
+
+/* TITLE */
+.product h3{
+    margin:10px 0;
 }
 
 /* PRICE */
-
 .price{
-color:#e53935;
-font-size:22px;
-font-weight:bold;
-margin:5px;
+    color:#e74c3c;
+    font-size:20px;
+    font-weight:bold;
 }
 
+/* OLD PRICE */
 .old-price{
-color:gray;
-text-decoration:line-through;
-margin:0;
-}
-
-/* PROMO BADGE */
-
-.badge{
-position:absolute;
-top:10px;
-left:10px;
-background:red;
-color:white;
-padding:5px 10px;
-border-radius:8px;
-font-size:12px;
+    text-decoration:line-through;
+    color:gray;
 }
 
 /* BUTTON */
-
 .btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 20px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#25D366;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
 }
 
 .btn:hover{
-background:#1ebe5d;
+    background:#1ebe5d;
 }
 
-/* BACK */
-
-.back{
-display:inline-block;
-margin-top:30px;
-padding:10px 20px;
-background:#333;
-color:white;
-text-decoration:none;
-border-radius:8px;
+/* PROMO BADGE */
+.badge{
+    position:absolute;
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:12px;
 }
 
-/* FLOAT */
-
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:12px;
-border-radius:50%;
-text-decoration:none;
+.product-container{
+    position:relative;
 }
 
 </style>
@@ -140,201 +107,131 @@ text-decoration:none;
 </head>
 <body>
 
-<header>
-<h1>🍫 Nos Chocolats</h1>
-<p>Stock disponible</p>
-</header>
+<div class="header">
+🍫 Nos Chocolats
+</div>
 
-<section class="section">
+<div class="container">
 
 <div class="grid">
 
-<!-- KINDER BUENO -->
 
-<div class="card">
-
+<!-- Kinder Bueno PROMO -->
+<div class="product-container">
 <div class="badge">PROMO</div>
-
+<div class="product">
 <img src="kinder-bueno.jpg">
-
 <h3>Kinder Bueno</h3>
-
 <p class="old-price">9 DH</p>
 <p class="price">6 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Kinder Bueno"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux Kinder Bueno" class="btn">
 Commander
 </a>
-
+</div>
 </div>
 
-<!-- KITKAT -->
 
-<div class="card">
-
+<!-- KitKat -->
+<div class="product">
 <img src="kitkat.jpg">
-
 <h3>KitKat</h3>
-
 <p class="price">5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux KitKat"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux KitKat" class="btn">
 Commander
 </a>
-
 </div>
 
-<!-- SNICKERS -->
 
-<div class="card">
-
+<!-- Snickers -->
+<div class="product">
 <img src="snickers.jpg">
-
 <h3>Snickers</h3>
-
 <p class="price">5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Snickers"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux Snickers" class="btn">
 Commander
 </a>
-
 </div>
 
-<!-- TWIX -->
 
-<div class="card">
-
-<img src="twix.jpg">
-
-<h3>Twix</h3>
-
-<p class="price">5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Twix"
-class="btn">
-Commander
-</a>
-
-</div>
-
-<!-- MARS -->
-
-<div class="card">
-
+<!-- Mars -->
+<div class="product">
 <img src="mars.jpg">
-
 <h3>Mars</h3>
-
 <p class="price">5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Mars"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux Mars" class="btn">
 Commander
 </a>
-
 </div>
 
-<!-- NESTLE -->
 
-<div class="card">
+<!-- Twix -->
+<div class="product">
+<img src="twix.jpg">
+<h3>Twix</h3>
+<p class="price">5 DH</p>
+<a href="https://wa.me/212652243366?text=Je veux Twix" class="btn">
+Commander
+</a>
+</div>
 
+
+<!-- Nestlé -->
+<div class="product">
 <img src="nestle.jpg">
-
 <h3>Nestlé</h3>
-
 <p class="price">20 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Nestlé"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux Nestlé" class="btn">
 Commander
 </a>
-
 </div>
 
-<!-- MILKA -->
 
-<div class="card">
-
-<img src="milka.jpg">
-
-<h3>Milka</h3>
-
-<p class="price">20 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Milka"
-class="btn">
-Commander
-</a>
-
-</div>
-
-<!-- MALTESERS -->
-
-<div class="card">
-
-<img src="maltesers.jpg">
-
-<h3>Maltesers</h3>
-
-<p class="price">15 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Maltesers"
-class="btn">
-Commander
-</a>
-
-</div>
-
-<!-- RAFFAELLO -->
-
-<div class="card">
-
-<img src="raffaello.jpg">
-
-<h3>Raffaello</h3>
-
-<p class="price">30 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Raffaello"
-class="btn">
-Commander
-</a>
-
-</div>
-
-<!-- FERRERO ROCHER -->
-
-<div class="card">
-
+<!-- Ferrero Rocher -->
+<div class="product">
 <img src="ferrero-rocher.jpg">
-
 <h3>Ferrero Rocher</h3>
-
 <p class="price">45 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux Ferrero Rocher"
-class="btn">
+<a href="https://wa.me/212652243366?text=Je veux Ferrero Rocher" class="btn">
 Commander
 </a>
-
 </div>
 
+
+<!-- Milka -->
+<div class="product">
+<img src="milka.jpg">
+<h3>Milka</h3>
+<p class="price">10 DH</p>
+<a href="https://wa.me/212652243366?text=Je veux Milka" class="btn">
+Commander
+</a>
 </div>
 
-<a href="index.html" class="back">
-⬅ Retour à l'accueil
-</a>
 
-</section>
-
-<a href="https://wa.me/212652243366"
-class="whatsapp-float">
-💬
+<!-- Maltesers -->
+<div class="product">
+<img src="maltesers.jpg">
+<h3>Maltesers</h3>
+<p class="price">7 DH</p>
+<a href="https://wa.me/212652243366?text=Je veux Maltesers" class="btn">
+Commander
 </a>
+</div>
+
+
+<!-- Raffaello -->
+<div class="product">
+<img src="raffaello.jpg">
+<h3>Raffaello</h3>
+<p class="price">45 DH</p>
+<a href="https://wa.me/212652243366?text=Je veux Raffaello" class="btn">
+Commander
+</a>
+</div>
+
+
+</div>
+</div>
 
 </body>
 </html>
-
