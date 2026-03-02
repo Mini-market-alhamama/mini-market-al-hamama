@@ -1,0 +1,175 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Arial, sans-serif;
+}
+
+/* BODY ANIMATION */
+body{
+background:#f4f6f8;
+animation:fadeIn 1s ease;
+}
+
+/* NAVBAR */
+.navbar{
+background:linear-gradient(90deg,#ff7a18,#32a852);
+padding:15px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+
+.logo img{
+width:40px;
+border-radius:8px;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:yellow;
+transform:scale(1.1);
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#ff7a18,#32a852);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+/* SECTION */
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+animation:fadeUp 0.8s ease;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card img{
+width:120px;
+margin-bottom:15px;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#32a852;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#2e7d32;
+transform:scale(1.1);
+}
+
+/* FOOTER */
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer a{
+color:#32a852;
+text-decoration:none;
+display:block;
+margin:5px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+animation:pulse 2s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
