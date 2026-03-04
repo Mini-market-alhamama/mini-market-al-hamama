@@ -34,6 +34,7 @@ border-radius:15px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 width:250px;
 transition:0.3s;
+position:relative;
 }
 
 .card:hover{
@@ -46,6 +47,36 @@ height:180px;
 object-fit:contain;
 border-radius:10px;
 }
+
+/* PROMO BADGE */
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:#ff0000;
+color:white;
+padding:5px 10px;
+border-radius:6px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* PRIX */
+
+.price{
+font-size:18px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+font-size:14px;
+}
+
+/* BOUTON */
 
 .whatsapp{
 display:inline-block;
@@ -86,17 +117,28 @@ font-weight:bold;
 
 <div class="products">
 
+<!-- KINDER BUENO PROMO -->
+
 <div class="card">
+
+<div class="badge">PROMO</div>
+
 <img src="kinder-bueno.jpg">
 <h3>Kinder Bueno</h3>
+
+<p class="old-price">9 DH</p>
+<p class="price">6 DH</p>
+
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Kinder Bueno" class="whatsapp">
 Commander
 </a>
+
 </div>
 
 <div class="card">
 <img src="ferrero-rocher.jpg">
 <h3>Ferrero Rocher</h3>
+<p class="price">45 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Ferrero Rocher" class="whatsapp">
 Commander
 </a>
@@ -105,6 +147,7 @@ Commander
 <div class="card">
 <img src="raffaello.jpg">
 <h3>Raffaello</h3>
+<p class="price">45 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Raffaello" class="whatsapp">
 Commander
 </a>
@@ -113,6 +156,7 @@ Commander
 <div class="card">
 <img src="milka.jpg">
 <h3>Milka</h3>
+<p class="price">10 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Milka" class="whatsapp">
 Commander
 </a>
@@ -121,6 +165,7 @@ Commander
 <div class="card">
 <img src="nestle.jpg">
 <h3>Nestlé</h3>
+<p class="price">20 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Nestlé" class="whatsapp">
 Commander
 </a>
@@ -129,6 +174,7 @@ Commander
 <div class="card">
 <img src="maltesers.jpg">
 <h3>Maltesers</h3>
+<p class="price">10 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Maltesers" class="whatsapp">
 Commander
 </a>
@@ -137,6 +183,7 @@ Commander
 <div class="card">
 <img src="twix.jpg">
 <h3>Twix</h3>
+<p class="price">5 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Twix" class="whatsapp">
 Commander
 </a>
@@ -145,6 +192,7 @@ Commander
 <div class="card">
 <img src="mars.jpg">
 <h3>Mars</h3>
+<p class="price">5 DH</p>
 <a href="https://wa.me/212652243366?text=Bonjour, je veux commander Mars" class="whatsapp">
 Commander
 </a>
