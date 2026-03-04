@@ -2,148 +2,149 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mini Market Al Hamama - Accueil</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mini Market Al Hamama</title>
 
 <style>
 
+/* RESET */
+
 body{
 margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
+font-family:Arial, sans-serif;
+background:#f4f6f8;
 }
 
-/* HEADER */
 
-header{
-background:linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
-color:white;
+/* NAVBAR */
+
+.navbar{
+background:linear-gradient(90deg,#ff7a18,#32a852);
 padding:15px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav-container{
 display:flex;
-align-items:center;
 justify-content:space-between;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
+align-items:center;
+max-width:1200px;
+margin:auto;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
+color:white;
+font-weight:bold;
+font-size:20px;
 }
 
 .logo img{
-width:50px;
-height:50px;
-border-radius:50%;
-background:white;
-padding:5px;
+width:40px;
+border-radius:8px;
 }
 
-.logo h1{
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
 margin:0;
-font-size:22px;
+padding:0;
 }
 
-/* MENU */
-
-nav a{
+.nav-links a{
 color:white;
 text-decoration:none;
-margin:0 15px;
 font-weight:bold;
 transition:0.3s;
 }
 
-nav a:hover{
-color:yellow;
+.nav-links a:hover{
+opacity:0.7;
 }
+
 
 /* HERO */
 
 .hero{
+background:linear-gradient(135deg,#ff7a18,#32a852);
+color:white;
 text-align:center;
-padding:50px;
-color:#333;
+padding:60px 20px;
+animation:fadeIn 1s ease;
 }
 
-.hero h2{
-font-size:32px;
-margin-bottom:10px;
+.hero img{
+width:100px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.hero h1{
+margin:10px 0;
 }
 
 .hero p{
-font-size:18px;
+margin:5px 0;
 }
+
 
 /* CATEGORIES */
 
-.categories{
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:30px;
+}
+
+.cards{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:30px;
-padding:40px;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .card{
 background:white;
 padding:20px;
 border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.2);
 width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.05);
+transform:translateY(-5px);
 }
 
 .card img{
-width:100%;
-height:180px;
-object-fit:contain;
-}
-
-.card h3{
-margin:10px 0;
+width:100px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 20px;
-background:#2ecc71;
+margin-top:15px;
+padding:10px 20px;
+background:#32a852;
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:8px;
 font-weight:bold;
-transition:0.3s;
 }
 
-.btn:hover{
-background:#27ae60;
-}
-
-/* PROMO IMAGE */
-
-.promo{
-text-align:center;
-margin:40px;
-}
-
-.promo img{
-width:300px;
-animation:float 3s infinite ease-in-out;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
-}
 
 /* FOOTER */
 
 footer{
-background:#111;
+background:#222;
 color:white;
 text-align:center;
 padding:20px;
@@ -151,94 +152,183 @@ margin-top:40px;
 }
 
 footer a{
-color:#2ecc71;
+color:#32a852;
 text-decoration:none;
-font-weight:bold;
-margin:0 10px;
+display:block;
+margin:5px;
 }
 
-footer a:hover{
-color:yellow;
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
 
 </head>
-
 <body>
 
-<header>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="nav-container">
 
 <div class="logo">
 <img src="logo.png">
-<h1>Mini Market Al Hamama</h1>
+Mini Market Al Hamama
 </div>
 
-<nav>
-<a href="index.html">Accueil</a>
-<a href="promotions.html">Promotions</a>
-<a href="chocolats.html">Chocolats</a>
-<a href="cafes.html">Cafés</a>
-<a href="boissons.html">Boissons</a>
+<ul class="nav-links">
+
+<li><a href="index.html">Accueil</a></li>
+
+<li><a href="promotions.html">Promotions</a></li>
+
+<li><a href="cafes.html">Cafés</a></li>
+
+<li><a href="chocolats.html">Chocolats</a></li>
+
+<li><a href="boissons.html">Boissons</a></li>
+
+</ul>
+
+</div>
+
 </nav>
 
-</header>
+
+<!-- HERO -->
 
 <div class="hero">
-<h2>Bienvenue à Mini Market Al Hamama</h2>
-<p>Les meilleurs cafés, chocolats et boissons à Nador</p>
+
+<img src="logo.png">
+
+<h1>Mini Market Al Hamama</h1>
+
+<p>Votre mini market de confiance à Nador</p>
+
+<p>Quartier Laarassi • Avenue Annasr</p>
+
 </div>
 
-<div class="categories">
+
+<!-- CATEGORIES -->
+
+<div class="section">
+
+<h2>Nos Catégories</h2>
+
+<div class="cards">
+
+
+<!-- PROMOTIONS -->
 
 <div class="card">
+
 <img src="promo.jpg">
-<h3>🔥 Promotions</h3>
-<a href="promotions.html" class="btn">Voir les produits</a>
+
+<h3>Promotions</h3>
+
+<p>Voir toutes les offres</p>
+
+<a href="promotions.html" class="btn">
+Voir les promotions
+</a>
+
 </div>
 
+
+<!-- CAFES -->
+
 <div class="card">
+
 <img src="lavazza-crema.jpg">
-<h3>☕ Cafés</h3>
-<a href="cafes.html" class="btn">Voir les produits</a>
+
+<h3>Cafés</h3>
+
+<p>Lavazza • Bellarom • Dallmayr</p>
+
+<a href="cafes.html" class="btn">
+Voir les cafés
+</a>
+
 </div>
 
+
+<!-- CHOCOLATS -->
+
 <div class="card">
+
 <img src="kinder-bueno.jpg">
-<h3>🍫 Chocolats</h3>
-<a href="chocolats.html" class="btn">Voir les produits</a>
+
+<h3>Chocolats</h3>
+
+<p>Kinder • Milka • Ferrero</p>
+
+<a href="chocolats.html" class="btn">
+Voir les chocolats
+</a>
+
 </div>
+
+
+<!-- BOISSONS -->
 
 <div class="card">
-<img src="schweppes-citrus.jpg">
-<h3>🥤 Boissons</h3>
-<a href="boissons.html" class="btn">Voir les produits</a>
-</div>
+
+<img src="redbull.jpg">
+
+<h3>Boissons</h3>
+
+<p>Jus • Soda • Energy</p>
+
+<a href="boissons.html" class="btn">
+Voir les boissons
+</a>
 
 </div>
 
-<div class="promo">
-<img src="promo.jpg">
-<h2>Super Promotions disponibles</h2>
+
 </div>
+
+</div>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-<p>Mini Market Al Hamama - Nador</p>
+<p><b>Mini Market Al Hamama</b></p>
 
-<p>
+<p>Nador</p>
 
-<a href="https://wa.me/212652243366">WhatsApp</a> |
+<a href="https://wa.me/212652243366">
+WhatsApp
+</a>
 
-<a href="https://instagram.com/">Instagram</a> |
+<a href="#">
+Instagram
+</a>
 
-<a href="https://maps.google.com/">Localisation</a>
-
-</p>
+<a href="https://maps.google.com">
+Localisation Google Maps
+</a>
 
 <p>© 2026 Mini Market Al Hamama</p>
 
 </footer>
+
 
 </body>
 </html>

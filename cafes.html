@@ -2,269 +2,251 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nos Cafés - Mini Market Al Hamama</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#c3ecf7,#f5af19);
+font-family:Arial;
+background:linear-gradient(135deg,#f0fff4,#e6f7ff);
+padding:40px;
 }
-
-/* HEADER */
-
-header{
-background:linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-}
-
-header img{
-width:45px;
-}
-
-nav a{
-color:white;
-margin:0 12px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
-}
-
-/* TITRE */
-
-h1{
-text-align:center;
-margin-top:30px;
-}
-
-/* PRODUITS */
 
 .products{
 display:flex;
 flex-wrap:wrap;
+gap:30px;
 justify-content:center;
-gap:25px;
-padding:40px;
 }
 
 .card{
 background:white;
-width:260px;
+width:250px;
 padding:20px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
+position:relative;
 }
 
 .card img{
 width:100%;
-height:170px;
+height:200px;
 object-fit:contain;
+}
+
+.price{
+color:red;
+font-size:22px;
+font-weight:bold;
 }
 
 .old{
 text-decoration:line-through;
 color:gray;
-margin:5px 0;
 }
 
-.price{
-color:#e74c3c;
-font-size:22px;
+.stock{
+color:green;
 font-weight:bold;
 }
 
-.cart-btn{
-background:#ff9800;
+.promo{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
 color:white;
-border:none;
-padding:10px;
-margin-top:8px;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
+padding:5px 10px;
+border-radius:10px;
+font-size:12px;
 }
 
-.cart-btn:hover{
-background:#e68900;
+.best{
+position:absolute;
+top:10px;
+right:10px;
+background:green;
+color:white;
+padding:5px 10px;
+border-radius:10px;
+font-size:12px;
 }
 
-/* PANIER */
-
-#cart{
-position:fixed;
-right:20px;
-top:80px;
+.whatsapp{
 background:#25D366;
 color:white;
-padding:10px 15px;
-border-radius:30px;
-cursor:pointer;
-}
-
-#cart-count{
-background:red;
-padding:2px 6px;
-border-radius:50%;
-margin-left:5px;
+padding:10px;
+display:block;
+margin-top:10px;
+text-decoration:none;
+border-radius:10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-
-<div>
-<img src="logo.png">
-</div>
-
-<nav>
-<a href="index.html">Accueil</a>
-<a href="promotions.html">Promotions</a>
-<a href="chocolats.html">Chocolats</a>
-<a href="boissons.html">Boissons</a>
-</nav>
-
-</header>
-
 <h1>☕ Nos Cafés</h1>
-
-<div id="cart" onclick="sendWhatsApp()">
-🛒 <span id="cart-count">0</span>
-</div>
 
 <div class="products">
 
 <!-- Lavazza Crema -->
 <div class="card">
+<div class="promo">PROMO</div>
+<div class="best">MEILLEUR PRIX</div>
+
 <img src="lavazza-crema.jpg">
-<h3>Lavazza Crema 1kg</h3>
+
+<h3>Lavazza Crema</h3>
+
+<p>Poids : 1 kg</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Lavazza Crema 1kg',150)">Ajouter au panier</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Crema 1kg">
+Commander WhatsApp
+</a>
+
 </div>
 
 <!-- Lavazza Gusto -->
 <div class="card">
+<div class="promo">PROMO</div>
+<div class="best">MEILLEUR PRIX</div>
+
 <img src="lavazza-gusto.jpg">
-<h3>Lavazza Gusto 1kg</h3>
+
+<h3>Lavazza Gusto</h3>
+
+<p>Poids : 1 kg</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Lavazza Gusto 1kg',150)">Ajouter</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Gusto 1kg">
+Commander WhatsApp
+</a>
+
 </div>
 
-<!-- Lavazza Gusto -->
-<div class="card">
-<img src="lavazza-qualita-oro.jpg">
-<h3>Lavazza qualita oro 1kg</h3>
-<p class="old">190 DH</p>
-<p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Lavazza Gusto 1kg',150)">Ajouter</button>
-</div>
-  
 <!-- Lavazza Forte -->
 <div class="card">
+<div class="promo">PROMO</div>
+<div class="best">MEILLEUR PRIX</div>
+
 <img src="lavazza-forte.jpg">
-<h3>Lavazza Forte 1kg</h3>
+
+<h3>Lavazza Forte</h3>
+
+<p>Poids : 1 kg</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="old">190 DH</p>
 <p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Lavazza Forte 1kg',150)">Ajouter</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Lavazza Forte 1kg">
+Commander WhatsApp
+</a>
+
 </div>
 
 <!-- Bellarom Intenso -->
 <div class="card">
+<div class="promo">PROMO</div>
+
 <img src="bellarom-intenso.jpg">
-<h3>Bellarom Intenso 500g</h3>
+
+<h3>Bellarom Intenso</h3>
+
+<p>Poids : 500 g</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="old">85 DH</p>
 <p class="price">60 DH</p>
-<button class="cart-btn" onclick="addToCart('Bellarom Intenso 500g',60)">Ajouter</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Bellarom Intenso">
+Commander WhatsApp
+</a>
+
 </div>
 
 <!-- Bellarom Gold -->
 <div class="card">
+
 <img src="bellarom-gold.jpg">
-<h3>Bellarom Gold 500g</h3>
+
+<h3>Bellarom Gold</h3>
+
+<p>Poids : 500 g</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="price">85 DH</p>
-<button class="cart-btn" onclick="addToCart('Bellarom Gold 500g',85)">Ajouter</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Bellarom Gold">
+Commander WhatsApp
+</a>
+
 </div>
 
-<!-- Dallmayr Prodomo -->
+<!-- Dallmayr -->
 <div class="card">
+<div class="promo">PROMO</div>
+
 <img src="dallmayr-prodomo.jpg">
-<h3>Dallmayr Prodomo 500g</h3>
-<p class="old-price">90 DH</p>
+
+<h3>Dallmayr Prodomo</h3>
+
+<p>Poids : 500 g</p>
+
+<p class="stock">● Stock disponible</p>
+
+<p class="old">90 DH</p>
 <p class="price">85 DH</p>
-<button class="cart-btn" onclick="addToCart('Dallmayr Prodomo 500g',85)">Ajouter</button>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Dallmayr">
+Commander WhatsApp
+</a>
+
 </div>
 
-<!-- Dallmayr Home Barista -->
+<!-- Capriccio -->
 <div class="card">
-<img src="dallmayr-barista.jpg">
-<h3>Dallmayr Home Barista 1kg</h3>
-<p class="old">190 DH</p>
-<p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Dallmayr Home Barista 1kg',160)">Ajouter</button>
-</div>
 
-<!-- Barissimo -->
-<div class="card">
-<img src="barissimo-espresso.jpg">
-<h3>Barissimo Tradizione Espresso 1kg</h3>
-<p class="old">190 DH</p>
-<p class="price">150 DH</p>
-<button class="cart-btn" onclick="addToCart('Barissimo Espresso 1kg',150)">Ajouter</button>
-</div>
-
-<!-- Dubois -->
-<div class="card">
 <img src="capriccio-dubois.jpg">
-<h3>Dubois Capriccio 400g</h3>
+
+<h3>Capriccio Dubois</h3>
+
+<p>Poids : 400 g</p>
+
+<p class="stock">● Stock disponible</p>
+
 <p class="price">55 DH</p>
-<button class="cart-btn" onclick="addToCart('Dubois Capriccio 400g',55)">Ajouter</button>
-</div>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Capriccio">
+Commander WhatsApp
+</a>
 
 </div>
 
-<script>
-
-let cart = [];
-
-function addToCart(name,price){
-cart.push(name + " - " + price + " DH");
-document.getElementById("cart-count").innerText = cart.length;
-}
-
-function sendWhatsApp(){
-let message="Bonjour, je veux commander :%0A";
-cart.forEach(item=>{
-message += "- " + item + "%0A";
-});
-window.open("https://wa.me/212652243366?text="+message);
-}
-
-</script>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
