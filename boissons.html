@@ -48,6 +48,7 @@ border-radius:15px;
 width:220px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 transition:0.3s;
+position:relative;
 }
 
 .card:hover{
@@ -58,6 +59,20 @@ transform:scale(1.05);
 width:100%;
 height:180px;
 object-fit:contain;
+}
+
+/* BADGE PROMO */
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
 }
 
 </style>
@@ -79,6 +94,8 @@ object-fit:contain;
 
 <div class="card">
 
+<span class="badge">PROMO</span>
+
 <img src="lipton-sparkling.jpg">
 
 <h3>Lipton Ice Tea</h3>
@@ -96,14 +113,12 @@ Ajouter au panier
 <img src="juver-ananas.jpg">
 <h3>Juver Ananas</h3>
 <p class="price">15 DH</p>
-
 </div>
 
 <div class="card">
 <img src="rostoy.jpg">
 <h3>Rostoy Melocoton</h3>
 <p class="price">13 DH</p>
-
 </div>
   
 <div class="card">
@@ -120,21 +135,18 @@ Ajouter au panier
 <img src="redbull.jpg">
 <h3>Red Bull</h3>
 <p class="price">17 DH</p>
-
 </div>
 
 <div class="card">
 <img src="oulmes-mojito.jpg">
 <h3>Oulmès Mojito</h3>
 <p class="price">8 DH</p>
-
 </div>
 
 <!-- SUNVITAL MELOCOTON -->
 
 <div class="card">
 <span class="badge">PROMO</span>
-<span class="super-badge">SUPER PROMO</span>
 
 <img src="sunvital.jpg">
 
@@ -170,72 +182,48 @@ Commander WhatsApp
 <h3>Juver Multifruit</h3>
 </div>
 
-
 <!-- OULMES -->
 
 <div class="card">
-
 <img src="oulmes-pina-colada.jpg">
-
 <h3>Oulmès Piña Colada</h3>
-
 <p class="price">8 DH</p>
-
 <button onclick="addToCart('Oulmès Piña Colada',8)" class="btn">
 Ajouter au panier
 </button>
-
 </div>
-
 
 <!-- VALENCIA ORANGE -->
 
 <div class="card">
-
 <img src="valencia-orange.jpg">
-
 <h3>Valencia Orange</h3>
-
 <p class="price">13 DH</p>
-
 <button onclick="addToCart('Valencia Orange',13)" class="btn">
 Ajouter au panier
 </button>
-
 </div>
-
 
 <!-- VALENCIA ANANAS -->
 
 <div class="card">
-
 <img src="valencia-ananas.jpg">
-
 <h3>Valencia Ananas</h3>
-
 <p class="price">13 DH</p>
-
 <button onclick="addToCart('Valencia Ananas',13)" class="btn">
 Ajouter au panier
 </button>
-
 </div>
-
 
 <!-- VALENCIA PECHE -->
 
 <div class="card">
-
 <img src="valencia-peche.jpg">
-
 <h3>Valencia Pêche</h3>
-
 <p class="price">13 DH</p>
-
 <button onclick="addToCart('Valencia Pêche',13)" class="btn">
 Ajouter au panier
 </button>
-
 </div>
 
 </div>
@@ -245,7 +233,3 @@ Ajouter au panier
 </body>
 
 </html>
-
-
-
-
