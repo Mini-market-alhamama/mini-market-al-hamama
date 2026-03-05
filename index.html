@@ -16,37 +16,6 @@ font-family:Arial, sans-serif;
 background:#f4f6f8;
 }
 
-/* PANIER */
-
-.cart{
-position:fixed;
-top:90px;
-right:20px;
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-width:220px;
-font-size:14px;
-z-index:999;
-}
-
-.cart h3{
-margin-top:0;
-}
-
-.cart button{
-margin-top:10px;
-background:#25D366;
-color:white;
-border:none;
-padding:8px;
-border-radius:6px;
-cursor:pointer;
-width:100%;
-}
-
-
 /* NAVBAR */
 
 .navbar{
@@ -208,21 +177,6 @@ transform:translateY(0);
 <body>
 
 
-<!-- PANIER -->
-
-<div class="cart">
-
-<h3>🛒 Panier</h3>
-
-<ul id="cart-items"></ul>
-
-<p><b>Total : <span id="total">0</span> DH</b></p>
-
-<button onclick="sendWhatsApp()">Commander</button>
-
-</div>
-
-
 <!-- NAVBAR -->
 
 <nav class="navbar">
@@ -380,23 +334,6 @@ Localisation Google Maps
 let cart=[]
 let total=0
 
-function addToCart(product,price){
-
-cart.push({product,price})
-
-total+=price
-
-let list=document.getElementById("cart-items")
-
-let item=document.createElement("li")
-
-item.textContent=product+" - "+price+" DH"
-
-list.appendChild(item)
-
-document.getElementById("total").textContent=total
-
-}
 
 function sendWhatsApp(){
 
@@ -417,3 +354,4 @@ window.open("https://wa.me/212652243366?text="+message)
 
 </body>
 </html>
+
