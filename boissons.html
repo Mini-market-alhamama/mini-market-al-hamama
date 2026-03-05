@@ -42,7 +42,7 @@ gap:25px;
 
 .card{
 background:white;
-padding:15px;
+padding:20px;
 border-radius:15px;
 width:220px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
@@ -58,6 +58,26 @@ transform:scale(1.05);
 width:100%;
 height:180px;
 object-fit:contain;
+}
+
+/* PRICES STYLE (comme cafés) */
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+font-size:14px;
+}
+
+.new-price{
+color:#e53935;
+font-size:22px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.stock{
+color:#2e7d32;
+font-weight:bold;
 }
 
 /* BADGE PROMO */
@@ -89,7 +109,7 @@ font-weight:bold;
 
 <div class="products">
 
-<!-- LIPTON PROMO -->
+<!-- LIPTON -->
 
 <div class="card">
 
@@ -99,50 +119,101 @@ font-weight:bold;
 
 <h3>Lipton Ice Tea</h3>
 
-<p class="old-price">3 pièces 12 DH</p>
-<p class="price">3 pièces = 10 DH</p>
+<p class="stock">• Stock disponible</p>
 
-<button onclick="addToCart('Lipton Ice Tea (3 pièces)',10)" class="btn">
-Ajouter au panier
-</button>
+<p class="old-price">12 DH</p>
+<p class="new-price">3 pièces = 10 DH</p>
 
 </div>
 
+
+<!-- JUVER ANANAS -->
+
 <div class="card">
+
 <img src="juver-ananas.jpg">
+
 <h3>Juver Ananas</h3>
-<p class="price">15 DH</p>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="new-price">15 DH</p>
+
 </div>
 
+
+<!-- ROSTOY -->
+
 <div class="card">
+
 <img src="rostoy.jpg">
+
 <h3>Rostoy Melocoton</h3>
-<p class="price">13 DH</p>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="new-price">13 DH</p>
+
 </div>
-  
+
+
+<!-- SCHWEPPES CITRUS -->
+
 <div class="card">
+
 <img src="schweppes-citrus.jpg">
+
 <h3>Schweppes Citrus</h3>
+
+<p class="stock">• Stock disponible</p>
+
 </div>
 
+
+<!-- SCHWEPPES TONIC -->
+
 <div class="card">
+
 <img src="tonic.jpg">
+
 <h3>Schweppes Tonic</h3>
+
+<p class="stock">• Stock disponible</p>
+
 </div>
-  
+
+
+<!-- RED BULL -->
+
 <div class="card">
+
 <img src="redbull.jpg">
+
 <h3>Red Bull</h3>
-<p class="price">17 DH</p>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="new-price">17 DH</p>
+
 </div>
+
+
+<!-- OULMES MOJITO -->
 
 <div class="card">
+
 <img src="oulmes-mojito.jpg">
+
 <h3>Oulmès Mojito</h3>
-<p class="price">8 DH</p>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="new-price">8 DH</p>
+
 </div>
 
-<!-- SUNVITAL PROMO -->
+
+<!-- SUNVITAL -->
 
 <div class="card">
 
@@ -150,40 +221,17 @@ Ajouter au panier
 
 <img src="sunvital.jpg">
 
-<h3>Sunvital Melocoton (Pack 8)</h3>
+<h3>Sunvital Melocoton</h3>
+
+<p class="stock">• Stock disponible</p>
 
 <p class="old-price">15 DH</p>
 <p class="new-price">10 DH</p>
 
-<p style="color:green;font-weight:bold;">Économie 5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux sunvital melocoton" class="btn">
-Commander WhatsApp
-</a>
-
 </div>
 
-<div class="card">
-<img src="oulmes-orange.jpg">
-<h3>Oulmès Orange</h3>
-</div>
 
-<div class="card">
-<img src="bifrutas.jpg">
-<h3>Bifrutas Tropical</h3>
-</div>
-
-<div class="card">
-<img src="alboustane-orange.jpg">
-<h3>Al Boustane Orange</h3>
-</div>
-
-<div class="card">
-<img src="juver-multifruit.jpg">
-<h3>Juver Multifruit</h3>
-</div>
-
-<!-- OULMES -->
+<!-- OULMES PINA COLADA -->
 
 <div class="card">
 
@@ -191,13 +239,12 @@ Commander WhatsApp
 
 <h3>Oulmès Piña Colada</h3>
 
-<p class="price">8 DH</p>
+<p class="stock">• Stock disponible</p>
 
-<button onclick="addToCart('Oulmès Piña Colada',8)" class="btn">
-Ajouter au panier
-</button>
+<p class="new-price">8 DH</p>
 
 </div>
+
 
 <!-- VALENCIA ORANGE -->
 
@@ -207,13 +254,12 @@ Ajouter au panier
 
 <h3>Valencia Orange</h3>
 
-<p class="price">13 DH</p>
+<p class="stock">• Stock disponible</p>
 
-<button onclick="addToCart('Valencia Orange',13)" class="btn">
-Ajouter au panier
-</button>
+<p class="new-price">13 DH</p>
 
 </div>
+
 
 <!-- VALENCIA ANANAS -->
 
@@ -223,13 +269,12 @@ Ajouter au panier
 
 <h3>Valencia Ananas</h3>
 
-<p class="price">13 DH</p>
+<p class="stock">• Stock disponible</p>
 
-<button onclick="addToCart('Valencia Ananas',13)" class="btn">
-Ajouter au panier
-</button>
+<p class="new-price">13 DH</p>
 
 </div>
+
 
 <!-- VALENCIA PECHE -->
 
@@ -239,11 +284,9 @@ Ajouter au panier
 
 <h3>Valencia Pêche</h3>
 
-<p class="price">13 DH</p>
+<p class="stock">• Stock disponible</p>
 
-<button onclick="addToCart('Valencia Pêche',13)" class="btn">
-Ajouter au panier
-</button>
+<p class="new-price">13 DH</p>
 
 </div>
 
