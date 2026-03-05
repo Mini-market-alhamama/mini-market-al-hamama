@@ -12,6 +12,8 @@ margin:0;
 background: linear-gradient(135deg,#e6f7ff,#f0fff4);
 }
 
+/* HEADER /
+
 header{
 background: linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
 color:white;
@@ -28,12 +30,14 @@ padding:10px 20px;
 border-radius:10px;
 }
 
-/* PRODUITS /
+/ SECTION /
 
 section{
 padding:40px;
 text-align:center;
 }
+
+/ GRID /
 
 .products{
 display:flex;
@@ -41,6 +45,8 @@ flex-wrap:wrap;
 justify-content:center;
 gap:25px;
 }
+
+/ CARD /
 
 .card{
 background:white;
@@ -56,28 +62,35 @@ position:relative;
 transform:scale(1.05);
 }
 
+/ IMAGE FIX /
+
 .card img{
 width:100%;
 height:180px;
 object-fit:contain;
 }
 
-/ PRIX /
+/ PRICES /
 
 .old-price{
 text-decoration:line-through;
 color:gray;
+font-size:14px;
 }
 
 .new-price{
 color:#e53935;
 font-size:22px;
 font-weight:bold;
+margin-top:5px;
 }
+
+/ STOCK /
 
 .stock{
 color:#2e7d32;
 font-weight:bold;
+margin-top:5px;
 }
 
 / BADGE PROMO /
@@ -94,7 +107,7 @@ font-size:12px;
 font-weight:bold;
 }
 
-/ BOUTON WHATSAPP */
+/ WHATSAPP BUTTON */
 
 .whatsapp-btn{
 display:block;
@@ -105,6 +118,11 @@ padding:10px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+background:#27ae60;
 }
 
 </style>
@@ -137,27 +155,8 @@ font-weight:bold;
 <p class="old-price">3 pièces 12 DH</p>
 <p class="new-price">3 pièces = 10 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Lipton Ice Tea" class="whatsapp-btn">
-Commander WhatsApp
-</a>
-
-</div>
-<!-- SUNVITAL PROMO -->
-
-<div class="card">
-
-<span class="badge">PROMO</span>
-
-<img src="sunvital.jpg">
-
-<h3>Sunvital Melocoton </h3>
-
-<p class="old-price">15 DH</p>
-<p class="new-price">10 DH</p>
-
-<p style="color:green;font-weight:bold;">Économie 5 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux sunvital melocoton" class="btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Lipton Ice Tea"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
@@ -175,12 +174,12 @@ Commander WhatsApp
 
 <p class="new-price">15 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Juver Ananas" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Juver Ananas"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- ROSTOY -->
 
@@ -194,12 +193,12 @@ Commander WhatsApp
 
 <p class="new-price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Rostoy Melocoton" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Rostoy Melocoton"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- SCHWEPPES CITRUS -->
 
@@ -211,12 +210,12 @@ Commander WhatsApp
 
 <p class="stock">• Stock disponible</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Schweppes Citrus" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Schweppes Citrus"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- RED BULL -->
 
@@ -230,12 +229,12 @@ Commander WhatsApp
 
 <p class="new-price">17 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Red Bull" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Red Bull"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- OULMES MOJITO -->
 
@@ -249,12 +248,53 @@ Commander WhatsApp
 
 <p class="new-price">8 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Oulmès Mojito" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Oulmès Mojito"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
 
+<!-- SUNVITAL -->
+
+<div class="card">
+
+<span class="badge">PROMO</span>
+
+<img src="sunvital.jpg">
+
+<h3>Sunvital Melocoton</h3>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="old-price">15 DH</p>
+<p class="new-price">10 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux commander Sunvital Melocoton"
+class="whatsapp-btn">
+Commander WhatsApp
+</a>
+
+</div>
+
+<!-- OULMES PINA COLADA -->
+
+<div class="card">
+
+<img src="oulmes-pina-colada.jpg">
+
+<h3>Oulmès Piña Colada</h3>
+
+<p class="stock">• Stock disponible</p>
+
+<p class="new-price">8 DH</p>
+
+<a href="https://wa.me/212652243366?text=Je veux commander Oulmès Piña Colada"
+class="whatsapp-btn">
+Commander WhatsApp
+</a>
+
+</div>
 
 <!-- VALENCIA ORANGE -->
 
@@ -268,12 +308,12 @@ Commander WhatsApp
 
 <p class="new-price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Orange" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Valencia Orange"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- VALENCIA ANANAS -->
 
@@ -287,12 +327,12 @@ Commander WhatsApp
 
 <p class="new-price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Ananas" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Valencia Ananas"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
 </div>
-
 
 <!-- VALENCIA PECHE -->
 
@@ -306,7 +346,8 @@ Commander WhatsApp
 
 <p class="new-price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Pêche" class="whatsapp-btn">
+<a href="https://wa.me/212652243366?text=Je veux commander Valencia Pêche"
+class="whatsapp-btn">
 Commander WhatsApp
 </a>
 
@@ -318,4 +359,3 @@ Commander WhatsApp
 
 </body>
 </html>
-
