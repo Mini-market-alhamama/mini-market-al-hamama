@@ -2,134 +2,85 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Nos Boissons - Mini Market Al Hamama</title>
 
 <style>
 
 body{
-margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#e6f7ff,#f0fff4);
-text-align:center;
+background:linear-gradient(135deg,#f0fff4,#e6f7ff);
+padding:40px;
 }
-
-/* HEADER /
-
-header{
-background:linear-gradient(90deg,#ff6a00,#ff3cac,#2ecc71);
-color:white;
-padding:20px;
-}
-
-header a{
-display:inline-block;
-margin-top:10px;
-background:white;
-color:#ff3cac;
-padding:10px 20px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/ GRID /
 
 .products{
 display:flex;
 flex-wrap:wrap;
-justify-content:center;
 gap:30px;
-padding:40px;
+justify-content:center;
 }
-
-/ CARD /
 
 .card{
 background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-width:260px;
-transition:0.3s;
+width:250px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+text-align:center;
 position:relative;
 }
 
-.card:hover{
-transform:scale(1.05);
-}
-
-/ IMAGE /
-
 .card img{
 width:100%;
-max-height:170px;
+height:200px;
 object-fit:contain;
-margin-bottom:15px;
 }
 
-/ BADGES /
-
-.badge{
-position:absolute;
-top:15px;
-left:15px;
-background:#ff4b4b;
-color:white;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
+.price{
+color:red;
+font-size:22px;
 font-weight:bold;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
+}
+
+.stock{
+color:green;
+font-weight:bold;
+}
+
+.promo{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+color:white;
+padding:5px 10px;
+border-radius:10px;
+font-size:12px;
 }
 
 .best{
 position:absolute;
-top:15px;
-right:15px;
-background:#2ecc71;
+top:10px;
+right:10px;
+background:green;
 color:white;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-}
-
-/ TEXT /
-
-.stock{
-color:#2e7d32;
-font-weight:bold;
-margin:10px 0;
-}
-
-.old-price{
-text-decoration:line-through;
-color:gray;
-margin:5px;
-}
-
-.price{
-color:#e53935;
-font-size:24px;
-font-weight:bold;
-}
-
-/ BUTTON */
-
-.btn{
-display:block;
-margin-top:15px;
-background:#2ecc71;
-color:white;
-padding:12px;
+padding:5px 10px;
 border-radius:10px;
-text-decoration:none;
-font-weight:bold;
+font-size:12px;
 }
 
-.btn:hover{
-background:#27ae60;
+.whatsapp{
+background:#25D366;
+color:white;
+padding:10px;
+display:block;
+margin-top:10px;
+text-decoration:none;
+border-radius:10px;
 }
 
 </style>
@@ -138,176 +89,142 @@ background:#27ae60;
 
 <body>
 
-<header>
-
 <h1>🥤 Nos Boissons</h1>
-
-<a href="index.html">⬅ Retour</a>
-
-</header>
 
 <div class="products">
 
-<!-- LIPTON -->
-
+<!-- Lipton -->
 <div class="card">
-
-<span class="badge">PROMO</span>
+<div class="promo">PROMO</div>
 
 <img src="lipton-sparkling.jpg">
 
 <h3>Lipton Ice Tea</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
-<p class="old-price">3 pièces 12 DH</p>
-
+<p class="old">3 pièces 12 DH</p>
 <p class="price">3 pièces = 10 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Lipton Ice Tea"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Lipton Ice Tea">
 Commander WhatsApp
 </a>
 
 </div>
 
 
-<!-- JUVER -->
-
+<!-- Red Bull -->
 <div class="card">
-
-<img src="juver-ananas.jpg">
-
-<h3>Juver Ananas</h3>
-
-<p class="stock">• Stock disponible</p>
-
-<p class="price">15 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux commander Juver Ananas"
-class="btn">
-Commander WhatsApp
-</a>
-
-</div>
-
-
-<!-- ROSTOY -->
-
-<div class="card">
-
-<img src="rostoy.jpg">
-
-<h3>Rostoy Melocoton</h3>
-
-<p class="stock">• Stock disponible</p>
-
-<p class="price">13 DH</p>
-
-<a href="https://wa.me/212652243366?text=Je veux commander Rostoy Melocoton"
-class="btn">
-Commander WhatsApp
-</a>
-
-</div>
-
-
-<!-- REDBULL -->
-
-<div class="card">
-
-<span class="best">MEILLEUR PRIX</span>
+<div class="best">MEILLEUR PRIX</div>
 
 <img src="redbull.jpg">
 
 <h3>Red Bull</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
 <p class="price">17 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Red Bull"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Red Bull">
 Commander WhatsApp
 </a>
 
 </div>
 
 
-<!-- OULMES PINA COLADA -->
-
+<!-- Oulmès Piña Colada -->
 <div class="card">
 
 <img src="oulmes-pina-colada.jpg">
 
 <h3>Oulmès Piña Colada</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
 <p class="price">8 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Oulmès Piña Colada"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Oulmès Piña Colada">
 Commander WhatsApp
 </a>
 
 </div>
 
 
-<!-- VALENCIA ORANGE -->
-
+<!-- Valencia Orange -->
 <div class="card">
 
 <img src="valencia-orange.jpg">
 
 <h3>Valencia Orange</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
 <p class="price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Orange"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Valencia Orange">
 Commander WhatsApp
 </a>
 
 </div>
 
 
-<!-- VALENCIA ANANAS -->
-
+<!-- Valencia Ananas -->
 <div class="card">
 
 <img src="valencia-ananas.jpg">
 
 <h3>Valencia Ananas</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
 <p class="price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Ananas"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Valencia Ananas">
 Commander WhatsApp
 </a>
 
 </div>
 
 
-<!-- VALENCIA PECHE -->
-
+<!-- Valencia Pêche -->
 <div class="card">
 
 <img src="valencia-peche.jpg">
 
 <h3>Valencia Pêche</h3>
 
-<p class="stock">• Stock disponible</p>
+<p class="stock">● Stock disponible</p>
 
 <p class="price">13 DH</p>
 
-<a href="https://wa.me/212652243366?text=Je veux commander Valencia Pêche"
-class="btn">
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Valencia Pêche">
+Commander WhatsApp
+</a>
+
+</div>
+
+
+<!-- Sunvital -->
+<div class="card">
+<div class="promo">PROMO</div>
+
+<img src="sunvital.jpg">
+
+<h3>Sunvital Melocoton</h3>
+
+<p class="stock">● Stock disponible</p>
+
+<p class="old">15 DH</p>
+<p class="price">10 DH</p>
+
+<a class="whatsapp"
+href="https://wa.me/212652243366?text=Bonjour je veux Sunvital Melocoton">
 Commander WhatsApp
 </a>
 
